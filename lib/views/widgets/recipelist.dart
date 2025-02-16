@@ -80,14 +80,13 @@ class _RecipeListScreenState extends State<RecipeListScreen> {
 
     // Ensure you're mapping the JSON data correctly to the Recipe model
     for (Map<String, dynamic> p in decodeData) {
-      Recipe product = Recipe(
+      Recipe recipe = Recipe(
         title: p['title'] ?? '',  // Access title from the JSON data
         ingredients: p['ingredients'] ?? '',  // Access ingredients from the JSON data
         instructions: p['instructions'] ?? '',  // Access instructions from the JSON data
-        servings: p['servings'] ?? '', // Handle servings if needed
       );
       
-      recipeList.add(product);
+      recipeList.add(recipe);
     }
   }
 
